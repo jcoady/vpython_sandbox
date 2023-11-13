@@ -1,4 +1,4 @@
-name: Upload Python wheel to PyPI
+name: Upload Python wheel to Test PyPI
 
 on:
   release:
@@ -37,7 +37,8 @@ jobs:
         TWINE_PASSWORD: ${{ secrets.PYPI_UPLOAD_TOKEN }}
       run: |
         python -m build
-        twine upload dist/*.whl
+        #twine upload dist/*.whl
+        twine upload --repository testpypi dist/*.whl
 
   linux_wheels:
     runs-on: ubuntu-latest
@@ -68,7 +69,8 @@ jobs:
         TWINE_USERNAME: __token__
         TWINE_PASSWORD: ${{ secrets.PYPI_UPLOAD_TOKEN }}
       run: |
-        twine upload dist/vpython-*-manylinux*.whl
+        #twine upload dist/vpython-*-manylinux*.whl
+        twine upload --repository testpypi dist/vpython-*-manylinux*.whl
 
   linux_aarch64_wheels:
     runs-on: ubuntu-latest
@@ -97,7 +99,8 @@ jobs:
         TWINE_USERNAME: __token__
         TWINE_PASSWORD: ${{ secrets.PYPI_UPLOAD_TOKEN }}
       run: |
-        twine upload dist/vpython-*-manylinux*.whl
+        #twine upload dist/vpython-*-manylinux*.whl
+        twine upload --repository testpypi dist/vpython-*-manylinux*.whl
 
   sdist:
     runs-on: ubuntu-latest
@@ -117,4 +120,5 @@ jobs:
         TWINE_PASSWORD: ${{ secrets.PYPI_UPLOAD_TOKEN }}
       run: |
         python -m build
-        twine upload dist/*.tar.gz
+        #twine upload dist/*.tar.gz
+        twine upload --repository testpypi dist/*.tar.gz
