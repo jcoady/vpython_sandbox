@@ -14,7 +14,7 @@ install_requires = ['jupyter', 'jupyter-server-proxy', 'numpy', 'ipykernel',
                     'autobahn>=22.6.1, <27']
 
 setup_args = dict(
-    name='vpython_sandbox',
+    name='vpython',
     packages=['vpython'],
     description='VPython for Jupyter Notebook',
     long_description=open('README.md').read(),
