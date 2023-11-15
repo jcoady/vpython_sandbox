@@ -99,8 +99,8 @@ jobs:
         TWINE_USERNAME: __token__
         TWINE_PASSWORD: ${{ secrets.PYPI_UPLOAD_TOKEN }}
       run: |
-        #twine upload dist/vpython-*-manylinux*.whl
-        twine upload --repository testpypi dist/vpython-*-manylinux*.whl
+        #twine upload dist/vpython_sandbox-*-manylinux*.whl
+        twine upload --repository testpypi dist/vpython_sandbox-*-manylinux*.whl
 
   sdist:
     runs-on: ubuntu-latest
