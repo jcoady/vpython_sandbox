@@ -1,9 +1,10 @@
 name: Upload Python wheel to Test PyPI
 
 on: workflow_dispatch
-on:
-  release:
-    types: [created]
+
+#on:
+#  release:
+#    types: [created]
 
 jobs:
   wheels:
