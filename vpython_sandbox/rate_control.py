@@ -231,7 +231,7 @@ def message_send_wrapper():
     what would otherwise be a circular import. __init__ imports rate, and vpython imports rate,
     and this cannot also import vpython at the same time.
     """
-    from .vpython import baseObj
+    from .vpython_sandbox import baseObj
     def message_sender(msg):
         baseObj.glow.handle_msg(msg)
     return message_sender

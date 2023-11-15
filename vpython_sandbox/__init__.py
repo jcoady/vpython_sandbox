@@ -14,26 +14,26 @@ del get_distribution
 del DistributionNotFound
 
 # Keep the remaining imports later to  ensure that __version__ and
-#  __gs_version__ exist before importing vpython, which itself imports
+#  __gs_version__ exist before importing vpython_sandbox, which itself imports
 # both of those.
 
 from ._notebook_helpers import __is_spyder
 
-from .vpython import canvas
+from .vpython_sandbox import canvas
 
 # Need to initialize canvas before user does anything and before
 # importing GSprint
 scene = canvas()
 
-from .vpython import *
+from .vpython_sandbox import *
 from .shapespaths import *
 from ._vector_import_helper import *
 from .rate_control import rate
 from .gsprint import GSprint
 
-# gsprint and vpython are showing up in the
+# gsprint and vpython_sandbox are showing up in the
 # namespace, so delete them
-del gsprint, vpython
+del gsprint, vpython_sandbox
 
 # cyvector may be in the namespace. Get rid of it
 try:

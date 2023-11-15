@@ -7,7 +7,7 @@ import notebook
 import IPython
 from IPython.display import display, Javascript
 
-from .vpython import GlowWidget, baseObj, canvas
+from .vpython_sandbox import GlowWidget, baseObj, canvas
 from .rate_control import ws_queue
 from . import __version__
 

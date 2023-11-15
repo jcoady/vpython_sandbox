@@ -6,7 +6,7 @@ from binstar_client import Conflict
 from sync import sync
 
 FROM = 'conda-forge'
-TO = 'vpython'
+TO = 'vpython_sandbox'
 
 
 def main(requirements_path):

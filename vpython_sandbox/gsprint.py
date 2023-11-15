@@ -1,4 +1,4 @@
-from .vpython import baseObj
+from .vpython_sandbox import baseObj
 
 # This must come after creating a canvas
 
