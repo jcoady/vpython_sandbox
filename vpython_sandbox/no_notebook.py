@@ -1,4 +1,4 @@
-from .vpython import GlowWidget, baseObj, vector, canvas, _browsertype
+from .vpython_sandbox import GlowWidget, baseObj, vector, canvas, _browsertype
 from ._notebook_helpers import _in_spyder, _undo_vpython_import_in_spyder
 
 from http.server import BaseHTTPRequestHandler, HTTPServer

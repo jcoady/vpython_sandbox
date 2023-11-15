@@ -5,25 +5,25 @@ from distutils.extension import Extension
 try:
     from Cython.Build import cythonize
     USE_CYTHON = True
-    extensions = cythonize('vpython/cyvector.pyx')
+    extensions = cythonize('vpython_sandbox/cyvector.pyx')
 except ImportError:
-    extensions = [Extension('vpython.cyvector', ['vpython/cyvector.c'])]
+    extensions = [Extension('vpython_sandbox.cyvector', ['vpython_sandbox/cyvector.c'])]
 
 
 install_requires = ['jupyter', 'jupyter-server-proxy', 'numpy', 'ipykernel',
                     'autobahn>=22.6.1, <27']
 
 setup_args = dict(
-    name='vpython',
-    packages=['vpython'],
-    description='VPython for Jupyter Notebook',
+    name='vpython_sandbox',
+    packages=['vpython_sandbox'],
+    description='vpython_sandbox for Jupyter Notebook',
     long_description=open('README.md').read(),
     long_description_content_type="text/markdown",
     author='John Coady / Ruth Chabay / Bruce Sherwood / Steve Spicklemire',
     author_email='bruce.sherwood@gmail.com',
-    url='http://pypi.python.org/pypi/vpython/',
+    url='http://pypi.python.org/pypi/vpython_sandbox/',
     license='LICENSE.txt',
-    keywords='vpython',
+    keywords='vpython_sandbox',
     classifiers=[
           'Framework :: IPython',
           'Development Status :: 5 - Production/Stable',
@@ -38,7 +38,7 @@ setup_args = dict(
     ext_modules=extensions,
     install_requires=install_requires,
     python_requires=">=3.7",
-    package_data={'vpython': ['vpython_data/*',
+    package_data={'vpython_sandbox': ['vpython_data/*',
                               'vpython_libraries/*',
                               'vpython_libraries/images/*']},
 )

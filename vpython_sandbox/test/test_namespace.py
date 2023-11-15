@@ -1,5 +1,5 @@
 import sys
-import vpython
+import vpython_sandbox
 
 API_NAMES = [
     'Camera',
@@ -126,7 +126,7 @@ API_NAMES = [
     'simple_sphere',
     'sin',
     'sinh',
-    'sleep',  # From vpython.py
+    'sleep',  # From vpython_sandbox.py
     'slider',
     'sphere',
     'sqrt',
@@ -152,7 +152,7 @@ API_NAMES = [
 
 
 def test_names_in_base_namspace():
-    current_names = set(name for name in dir(vpython)
+    current_names = set(name for name in dir(vpython_sandbox)
                         if not name.startswith('_'))
     api_name_set = set(API_NAMES)
 

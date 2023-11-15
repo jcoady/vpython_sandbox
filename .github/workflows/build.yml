@@ -45,17 +45,17 @@ jobs:
       run: |
         python -m build
 
-    - name: Install vpython
+    - name: Install vpython_sandbox
       run: |
         pip install .
 
     - name: Run tests
       run: |
-        pytest vpython
+        pytest vpython_sandbox
 
     - name: Import test
       run: |
-        python -c "import vpython"
+        python -c "import vpython_sandbox"
 
   build_aarch64:
 
@@ -87,10 +87,10 @@ jobs:
            pip install pytest Cython wheel && \
            echo -e "\e[1;34m Build wheel \e[0m" && \
            python setup.py bdist_wheel && \
-           echo -e "\e[1;34m Install vpython \e[0m" && \
+           echo -e "\e[1;34m Install vpython_sandbox \e[0m" && \
            pip install . && \
            echo -e "\e[1;34m Run tests \e[0m" && \
-           pytest vpython && \
+           pytest vpython_sandbox && \
            echo -e "\e[1;34m Import test \e[0m" && \
-           python -c "import vpython" && \
+           python -c "import vpython_sandbox" && \
            deactivate'
